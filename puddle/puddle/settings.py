@@ -82,9 +82,18 @@ WSGI_APPLICATION = 'puddle.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'puddle',
+        'USER': 'ndmsmajglheod3xxj531',
+        'PASSWORD': 'pscale_pw_4cQLktoVZrCkpyJY8NhNAEkDOqLLHGVW5PpUFYsZ1fa',
+        'HOST': 'aws.connect.psdb.cloud',
+        'PORT': '3306',
+        'OPTIONS': {
+            'ssl': {
+                'ca': '/etc/ssl/certs/ca-certificates.crt',
+            },
+        },
+    },
 }
 
 
